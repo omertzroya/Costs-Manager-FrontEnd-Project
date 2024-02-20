@@ -1,0 +1,123 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.header {
+    text-align: center;
+    color: #fff;
+    margin-top: 0;
+    font-size: 48px;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.bg-secondary {
+    background-color: #f4f4f4 !important;
+}
+
+.form-header {
+    text-align: center;
+    font-size: 50px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+.text-white{
+    color:black !important;
+}
+
+.form-container {
+    width: 100%;
+    padding: 20px;
+}
+
+#costForm{
+    width: 1000px;
+    height : 400px;
+    padding: 20px;
+    margin: 0 auto;
+}
+.select-input {
+    padding: 19px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 14px; /* Decrease font size */
+}
+
+.select-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.select-container label {
+    font-size:14px;
+}
+
+.table {
+    width: 100%;
+}
+
+.table th,
+.table td {
+    text-align: center;
+    vertical-align: middle;
+}
+
+.table th {
+    font-size: 18px;
+}
+
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 250px;
+    background-color: #333;
+    padding-top: 15px;
+    z-index: 1000;
+}
+
+.sidebar-brand {
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    margin-bottom: 20px;
+    font-size: 24px;
+    display: block;
+}
+
+.sidebar-brand:hover {
+    color: #fff;
+}
+
+.sidebar-nav-item {
+    padding: 10px;
+    text-align: center;
+}
+
+.sidebar-nav-item:hover {
+    background-color: #555;
+}
+
+.sidebar-nav-item a {
+    color: #fff;
+    text-decoration: none;
+}
+
+#sidebarToggle {
+    position: absolute;
+    top: 10px;
+    right: -30px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1001;
+}
