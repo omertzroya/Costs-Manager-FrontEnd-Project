@@ -133,20 +133,20 @@
         event.preventDefault();
 
         //data
-        var category = document.getElementById('categorySelect').value;
-        var costValue = document.getElementById('costInput').value;
-        var description = document.getElementById('descriptionInput').value;
+        let category = document.getElementById('categorySelect').value;
+        let costValue = document.getElementById('costInput').value;
+        let description = document.getElementById('descriptionInput').value;
 
         // Get the current date and extract the month and year
-        var currentDate = new Date();
-        var month = currentDate.getMonth() + 1;
-        var year = currentDate.getFullYear();
+        let currentDate = new Date();
+        let month = currentDate.getMonth() + 1;
+        let year = currentDate.getFullYear();
 
         // Format month and year to ensure they are in MM-YYYY format
-        var datetime = `${month.toString().padStart(2, '0')}-${year}`;
+        let datetime = `${month.toString().padStart(2, '0')}-${year}`;
 
         // Create a new cost entry object
-        var entry = {
+        let entry = {
             category: category,
             cost: costValue,
             Description: description,
@@ -169,27 +169,27 @@
 
     // Function to update the report table based on the selected year and month
     function updateReportTable() {
-        var selectedYear = document.getElementById('year').value;
-        var selectedMonth = document.getElementById('month').options[document.getElementById('month').selectedIndex].text;
+        let selectedYear = document.getElementById('year').value;
+        let selectedMonth = document.getElementById('month').options[document.getElementById('month').selectedIndex].text;
 
         if (selectedYear && selectedMonth) {
             idb.openCostsDB('cost', 1).then(db => {
                 return db.fetchCostData(selectedYear, selectedMonth);
             }).then(data => {
-                var tbody = document.querySelector('table tbody');
+                let tbody = document.querySelector('table tbody');
                 tbody.innerHTML = '';
                 data.forEach(entry => {
-                    var row = tbody.insertRow();
-                    var categoryCell = row.insertCell();
+                    let row = tbody.insertRow();
+                    let categoryCell = row.insertCell();
                     categoryCell.textContent = entry.category;
 
-                    var costCell = row.insertCell();
+                    let costCell = row.insertCell();
                     costCell.textContent = entry.cost;
 
-                    var descriptionCell = row.insertCell();
+                    let descriptionCell = row.insertCell();
                     descriptionCell.textContent = entry.Description;
 
-                    var dateCell = row.insertCell();
+                    let dateCell = row.insertCell();
                     dateCell.textContent = entry.Date;
                 });
             }).catch(error => {
