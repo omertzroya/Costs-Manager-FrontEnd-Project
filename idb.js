@@ -1,6 +1,6 @@
 class idb {
     constructor() {
-      this.db = null;
+        this.db = null;
     }
 
     // Method to open the IndexedDB database
@@ -18,7 +18,7 @@ class idb {
                 const db = event.target.result;
                 // Create the "cost" object store if it doesn't exist
                 if (!db.objectStoreNames.contains("cost")) {
-                    db.createObjectStore("cost", { keyPath: "id", autoIncrement: true });
+                    db.createObjectStore("cost", {keyPath: "id", autoIncrement: true});
                 }
             };
             request.onsuccess = event => {

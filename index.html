@@ -61,7 +61,7 @@
 <!-- End Add Cost Section -->
 
 <!-- Report Cost -->
-<div id="costsReportSection" class="container mt-5 bg-secondary" style="display: none;" >
+<div id="costsReportSection" class="container mt-5 bg-secondary" style="display: none;">
     <h2 class="form-header text-white">Costs Report</h2>
     <div class="select-container mb-3">
         <div>
@@ -101,7 +101,7 @@
         </div>
     </div>
     <table class="table" id="table tbody">
-        <thead >
+        <thead>
         <tr>
             <th>Category</th>
             <th>Cost</th>
@@ -120,16 +120,16 @@
 <script src="idb.js"></script>
 <script>
 
-        // Event listeners for the dropdown changes
-        document.getElementById('year').addEventListener('change', () => {
-            updateReportTable();
-        });
-        document.getElementById('month').addEventListener('change', () => {
+    // Event listeners for the dropdown changes
+    document.getElementById('year').addEventListener('change', () => {
         updateReportTable();
-        });
+    });
+    document.getElementById('month').addEventListener('change', () => {
+        updateReportTable();
+    });
 
-        // Event listener for the form submission button
-        document.getElementById('costForm').addEventListener('submit', function(event) {
+    // Event listener for the form submission button
+    document.getElementById('costForm').addEventListener('submit', function (event) {
         event.preventDefault();
 
         //data
@@ -165,7 +165,7 @@
             console.error("Failed to open database", error);
         });
     });
-     //End Event listener for the form submission button
+    //End Event listener for the form submission button
 
     // Function to update the report table based on the selected year and month
     function updateReportTable() {
@@ -197,17 +197,20 @@
             });
         }
     }
+
     // End Function to update the report table based on the selected year and month
 
-   // Function to show the expense entry section and hide the costs report section
+    // Function to show the expense entry section and hide the costs report section
     function showExpenseEntry() {
         document.getElementById('expenseEntrySection').style.display = 'block';
         document.getElementById('costsReportSection').style.display = 'none';
     }
+
     function showCostsReport() {
         document.getElementById('expenseEntrySection').style.display = 'none';
         document.getElementById('costsReportSection').style.display = 'block';
     }
+
     // End Function to show the expense entry section and hide the costs report section
 
 </script>
